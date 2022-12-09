@@ -1,0 +1,29 @@
+{{#if index}}
+
+{{#each data}}
+
+    <div class="card movie" key={{id}} style="width: 10rem; height: 28rem;">
+        <img src={{img}} class="card-img-top" style="" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">{{rating}}</p>
+            <a href="/movies/{{this.id}}" class="btn btn-primary">Chi tiết</a>
+        </div>
+    </div>
+
+{{/each}}
+{{else}}
+ 
+{{#each data}}
+
+    <div class="card movie" key={{id}} style="width: 10rem; height: 28rem;">
+        <img src={{image}} class="card-img-top" style="" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <p class="card-text">{{birthDate}}-{{birthPlace}}-{{gender}}</p>
+            <a href="/casts/{{this.id}}" class="btn btn-primary">Chi tiết</a>
+        </div>
+    </div>
+
+{{/each}}
+{{/if}}

@@ -1,0 +1,19 @@
+{{#each data}}
+<div class="card movie" key={{id}}>
+    <img src={{img}} class="card-img-top" style="" alt="..." width="200px" height="200px">
+
+    <h5 class="card-title">{{title}}</h5>
+    <p>Năm: {{year}}</p>
+    <p>Top rank: {{topRank}}</p>
+    <p>Rating: {{rating}}</p>
+    <p>Thể loại: {{genres}}</p>
+    <div class="people_list">
+        {{#reviews}}
+        <p>{{author}}</p>
+        <p>{{authorRating}}</p>
+        {{/reviews}}
+    </div>
+
+</div>
+
+{{/each}}
